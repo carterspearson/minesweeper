@@ -1,0 +1,9 @@
+﻿<Window x:Class="Minesweeper_UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="832" Width="1068">
+    <Grid Height="432" Name="holder" Width="885" HorizontalAlignment="Stretch">
+        <Grid Height="750" HorizontalAlignment="Center" Margin="-75,-144,-76,-174" Name="UIGrid" VerticalAlignment="Center" Width="1036" MouseLeftButtonDown="UIGrid_MouseLeftButtonDown" MouseRightButtonDown="UIGrid_MouseRightButtonDown"></Grid>
+    </Grid>
+
+</Window>

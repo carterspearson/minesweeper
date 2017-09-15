@@ -1,0 +1,11 @@
+c:\users\tester\documents\visual studio 2010\Projects\Minesweeper UI\Minesweeper UI\bin\Debug\Minesweeper UI.exe
+c:\users\tester\documents\visual studio 2010\Projects\Minesweeper UI\Minesweeper UI\bin\Debug\Minesweeper UI.pdb
+c:\users\tester\documents\visual studio 2010\Projects\Minesweeper UI\Minesweeper UI\obj\x86\Debug\MainWindow.baml
+c:\users\tester\documents\visual studio 2010\Projects\Minesweeper UI\Minesweeper UI\obj\x86\Debug\MainWindow.g.cs
+c:\users\tester\documents\visual studio 2010\Projects\Minesweeper UI\Minesweeper UI\obj\x86\Debug\App.g.cs
+c:\users\tester\documents\visual studio 2010\Projects\Minesweeper UI\Minesweeper UI\obj\x86\Debug\Minesweeper UI_MarkupCompile.cache
+c:\users\tester\documents\visual studio 2010\Projects\Minesweeper UI\Minesweeper UI\obj\x86\Debug\Minesweeper UI.g.resources
+c:\users\tester\documents\visual studio 2010\Projects\Minesweeper UI\Minesweeper UI\obj\x86\Debug\Minesweeper_UI.Properties.Resources.resources
+c:\users\tester\documents\visual studio 2010\Projects\Minesweeper UI\Minesweeper UI\obj\x86\Debug\Minesweeper UI.csproj.GenerateResource.Cache
+c:\users\tester\documents\visual studio 2010\Projects\Minesweeper UI\Minesweeper UI\obj\x86\Debug\Minesweeper UI.exe
+c:\users\tester\documents\visual studio 2010\Projects\Minesweeper UI\Minesweeper UI\obj\x86\Debug\Minesweeper UI.pdb
