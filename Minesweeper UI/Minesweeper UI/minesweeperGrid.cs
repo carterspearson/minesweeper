@@ -1,25 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using Minesweeper;
 using System.Linq;
 
 namespace Minesweeper_UI
 {
+    // class representing a grid of grid spaces
     public class minesweeperGrid
     {
         public Grid uiGrid;
         public GridSpace[,] gridSpaceArray;
         public int maximumMines, numberMines, length, height, squareSize;
 
+        // constructor
         public minesweeperGrid(Grid uiGrid0, int length0, int height0, int maximumMines0, int squareSize0)
         {
             uiGrid = uiGrid0;
@@ -31,28 +27,33 @@ namespace Minesweeper_UI
             InitializeGrid();
         }
 
+        // resets grid
         public void reset()
         {
             gridSpaceArray = new GridSpace[height, length];
             InitializeGrid();
         }
 
-        public void InitializeGridArray(int x0, int y0)
+        // populates mines in a grid, does not create a mine where the user first clicks
+        public void PopulateMines(int x0, int y0)
         {
             numberMines = 0;
             Random rnd = new Random();
             while (numberMines <= maximumMines)
             {
                 int random = rnd.Next(0, length * height);
-                int x = random % length;
+                int x = random % length; // get x and y coordinate from random number
                 int y = random / length;
-                if (x != x0 || y != y0)
+                if (x != x0 || y != y0) // only create a mine if it is not the one user clicked on
                 {
-                    gridSpaceArray[y, x] = new GridSpace(true, x, y);
-                    numberMines++;
+                    if (gridSpaceArray[y, x] == null) // only create a mine if the space has not been initialized
+                    {
+                        gridSpaceArray[y, x] = new GridSpace(true, x, y);
+                        numberMines++;
+                    }
                 }
             }
-            for (int i = 0; i < height; i++)
+            for (int i = 0; i < height; i++) // iterate through the rest of the grid spaces and initialize them
             {
                 for (int k = 0; k < length; k++)
                 {
@@ -62,6 +63,7 @@ namespace Minesweeper_UI
             }
         }
 
+        // creates a grid
         private void InitializeGrid()
         {
             uiGrid.Children.Clear();
@@ -104,12 +106,15 @@ namespace Minesweeper_UI
             }
         }
 
+        // recursively uncovers grid spaces
+        // if a grid space does not have a neighbouring mine, uncover each of its neighbours
         public bool uncover(List<GridSpace> listToUncover)
         {
             bool continueRecurse = true;
             List<GridSpace> tempListToUncover = new List<GridSpace>();
             GridSpace currentGridSpace = listToUncover.First();
 
+            // check if the selected grid space contains a mine
             if (currentGridSpace.mine == true)
             {
                 (uiGrid.Children[currentGridSpace.x + currentGridSpace.y * length] as Label).Background = new SolidColorBrush(GridColors.mineColor);
@@ -119,6 +124,7 @@ namespace Minesweeper_UI
                 throw new Exception();
             currentGridSpace.uncovered = true;
 
+            // iterate through each of the neighbours of the current grid space
             for (int i = currentGridSpace.x - 1; i <= currentGridSpace.x + 1; i++)
             {
                 if (i >= 0 && i < length)
@@ -127,13 +133,16 @@ namespace Minesweeper_UI
                     {
                         if (k >= 0 && k < height)
                         {
+                            // if space has a neighbouring mine, stop recursing
                             if (gridSpaceArray[k, i].mine == true)
                             {
                                 currentGridSpace.surroundingMines += 1;
                                 continueRecurse = false;
                             }
+                            // if the neighbour has not been uncovered and is not a mine, add it to a list of spaces to uncover
                             else if (gridSpaceArray[k, i].uncovered != true)
                             {
+                                // only add to list to uncover if the list does not already contain it
                                 if (!listToUncover.Contains(gridSpaceArray[k, i]))
                                 {
                                     if (i != currentGridSpace.x && k != currentGridSpace.y && currentGridSpace.corner == false)
@@ -154,6 +163,7 @@ namespace Minesweeper_UI
             }
             if (currentGridSpace.flagged != true)
             {
+                // set color of the uncovered grid, as well as the number of surrounding mines
                 (uiGrid.Children[currentGridSpace.x + currentGridSpace.y * length] as Label).Background = new SolidColorBrush(GridColors.uncoveredColor);
                 if (currentGridSpace.surroundingMines == 0)
                     (uiGrid.Children[currentGridSpace.x + currentGridSpace.y * length] as Label).Content = "";
@@ -161,8 +171,11 @@ namespace Minesweeper_UI
                     (uiGrid.Children[currentGridSpace.x + currentGridSpace.y * length] as Label).Content = currentGridSpace.surroundingMines;
             }
             listToUncover.Remove(currentGridSpace);
+            // if all possible spaces have been uncovered, return true
             if (listToUncover.Count == 0 && tempListToUncover.Count == 0)
                 return true;
+            // if we need to stop recursing, do not add current list to master
+            // master list to uncover still needs to be checked
             else if (continueRecurse == false)
             {
                 if (listToUncover.Count == 0)
@@ -170,6 +183,7 @@ namespace Minesweeper_UI
                 else
                     return uncover(listToUncover);
             }
+            // add newly created list to uncover to master list to uncover
             else
             {
                 listToUncover = listToUncover.Concat(tempListToUncover).ToList();
@@ -177,41 +191,46 @@ namespace Minesweeper_UI
             }
         }
 
+        // change a grid space status to flagged
         public bool flag(int x, int y)
         {
+            // only allow flagging on uncovered spaces
             if (gridSpaceArray[y, x].uncovered != true)
             {
                 bool win = true;
+                // if a space is flagged, flagging it again will unflag it
                 if (gridSpaceArray[y, x].flagged == true)
                 {
                     gridSpaceArray[y, x].flagged = false;
 
                     (uiGrid.Children[x + y * length] as Label).Background = new SolidColorBrush(GridColors.hiddenColor);
-
-                    win = false;
                 }
                 else
                 {
                     (uiGrid.Children[x + y * length] as Label).Background = new SolidColorBrush(GridColors.flaggedColor);
                     gridSpaceArray[y, x].flagged = true;
+                }
 
-                    for (int i = 0; i < length; i++)
+                // check for any incorrect flags or unflagged mines 
+                for (int i = 0; i < length; i++)
+                {
+                    for (int k = 0; k < height; k++)
                     {
-                        for (int k = 0; k < height; k++)
-                        {
-                            if (gridSpaceArray[k, i].mine == true && gridSpaceArray[k, i].flagged == false)
-                                win = false;
-                            else if (gridSpaceArray[k, i].mine == false && gridSpaceArray[k, i].flagged == true)
-                                win = false;
-                        }
+                        if (gridSpaceArray[k, i].mine == true && gridSpaceArray[k, i].flagged == false)
+                            win = false;
+                        else if (gridSpaceArray[k, i].mine == false && gridSpaceArray[k, i].flagged == true)
+                            win = false;
                     }
                 }
+
+                // if no incorrect flags or missed mines, the player wins
                 return win;
             }
             else
                 return false;
         }
 
+        // display all spaces which contain mines
         public void uncoverMines()
         {
             for (int i = 0; i < height; i++)

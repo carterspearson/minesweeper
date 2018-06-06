@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿
 
 namespace Minesweeper_UI
 {
+    // class containing colors used for different grid space states
     class GridColors
     {
         public static System.Windows.Media.Color mineColor = System.Windows.Media.Color.FromRgb(255, 0, 0);

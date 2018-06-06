@@ -9,3 +9,16 @@ c:\users\tester\documents\visual studio 2010\Projects\Minesweeper UI\Minesweeper
 c:\users\tester\documents\visual studio 2010\Projects\Minesweeper UI\Minesweeper UI\obj\x86\Debug\Minesweeper UI.csproj.GenerateResource.Cache
 c:\users\tester\documents\visual studio 2010\Projects\Minesweeper UI\Minesweeper UI\obj\x86\Debug\Minesweeper UI.exe
 c:\users\tester\documents\visual studio 2010\Projects\Minesweeper UI\Minesweeper UI\obj\x86\Debug\Minesweeper UI.pdb
+C:\Users\Carter Pearson\Documents\Side Projects\Minesweeper\minesweeper\Minesweeper UI\Minesweeper UI\bin\Debug\Minesweeper UI.exe
+C:\Users\Carter Pearson\Documents\Side Projects\Minesweeper\minesweeper\Minesweeper UI\Minesweeper UI\bin\Debug\Minesweeper UI.pdb
+C:\Users\Carter Pearson\Documents\Side Projects\Minesweeper\minesweeper\Minesweeper UI\Minesweeper UI\obj\x86\Debug\Minesweeper UI.csprojResolveAssemblyReference.cache
+C:\Users\Carter Pearson\Documents\Side Projects\Minesweeper\minesweeper\Minesweeper UI\Minesweeper UI\obj\x86\Debug\MainWindow.baml
+C:\Users\Carter Pearson\Documents\Side Projects\Minesweeper\minesweeper\Minesweeper UI\Minesweeper UI\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Carter Pearson\Documents\Side Projects\Minesweeper\minesweeper\Minesweeper UI\Minesweeper UI\obj\x86\Debug\App.g.cs
+C:\Users\Carter Pearson\Documents\Side Projects\Minesweeper\minesweeper\Minesweeper UI\Minesweeper UI\obj\x86\Debug\Minesweeper UI_MarkupCompile.cache
+C:\Users\Carter Pearson\Documents\Side Projects\Minesweeper\minesweeper\Minesweeper UI\Minesweeper UI\obj\x86\Debug\Minesweeper UI.g.resources
+C:\Users\Carter Pearson\Documents\Side Projects\Minesweeper\minesweeper\Minesweeper UI\Minesweeper UI\obj\x86\Debug\Minesweeper_UI.Properties.Resources.resources
+C:\Users\Carter Pearson\Documents\Side Projects\Minesweeper\minesweeper\Minesweeper UI\Minesweeper UI\obj\x86\Debug\Minesweeper UI.csproj.GenerateResource.Cache
+C:\Users\Carter Pearson\Documents\Side Projects\Minesweeper\minesweeper\Minesweeper UI\Minesweeper UI\obj\x86\Debug\Minesweeper UI.csproj.CoreCompileInputs.cache
+C:\Users\Carter Pearson\Documents\Side Projects\Minesweeper\minesweeper\Minesweeper UI\Minesweeper UI\obj\x86\Debug\Minesweeper UI.exe
+C:\Users\Carter Pearson\Documents\Side Projects\Minesweeper\minesweeper\Minesweeper UI\Minesweeper UI\obj\x86\Debug\Minesweeper UI.pdb

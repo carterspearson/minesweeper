@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Windows.Controls;
-using System.Windows.Shapes;
+﻿
 
 namespace Minesweeper
 {
+    // class representing a single grid space
     public class GridSpace
     {
         public bool flagged, mine, uncovered, corner;
         public int surroundingMines, x, y;
 
+        // default constructor
         public GridSpace()
         {
             flagged = false;
@@ -22,6 +19,7 @@ namespace Minesweeper
             y = 0;
         }
 
+        // constructor for grid space
         public GridSpace(bool mineStatus, int x0, int y0)
         {
             flagged = false;
