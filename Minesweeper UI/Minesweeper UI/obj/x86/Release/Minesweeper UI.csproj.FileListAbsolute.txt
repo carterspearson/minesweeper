@@ -1,0 +1,12 @@
+C:\Users\Carter Pearson\Documents\Side Projects\Minesweeper\minesweeper\Minesweeper UI\Minesweeper UI\bin\Release\Minesweeper UI.exe
+C:\Users\Carter Pearson\Documents\Side Projects\Minesweeper\minesweeper\Minesweeper UI\Minesweeper UI\bin\Release\Minesweeper UI.pdb
+C:\Users\Carter Pearson\Documents\Side Projects\Minesweeper\minesweeper\Minesweeper UI\Minesweeper UI\obj\x86\Release\MainWindow.baml
+C:\Users\Carter Pearson\Documents\Side Projects\Minesweeper\minesweeper\Minesweeper UI\Minesweeper UI\obj\x86\Release\MainWindow.g.cs
+C:\Users\Carter Pearson\Documents\Side Projects\Minesweeper\minesweeper\Minesweeper UI\Minesweeper UI\obj\x86\Release\App.g.cs
+C:\Users\Carter Pearson\Documents\Side Projects\Minesweeper\minesweeper\Minesweeper UI\Minesweeper UI\obj\x86\Release\Minesweeper UI_MarkupCompile.cache
+C:\Users\Carter Pearson\Documents\Side Projects\Minesweeper\minesweeper\Minesweeper UI\Minesweeper UI\obj\x86\Release\Minesweeper UI.g.resources
+C:\Users\Carter Pearson\Documents\Side Projects\Minesweeper\minesweeper\Minesweeper UI\Minesweeper UI\obj\x86\Release\Minesweeper_UI.Properties.Resources.resources
+C:\Users\Carter Pearson\Documents\Side Projects\Minesweeper\minesweeper\Minesweeper UI\Minesweeper UI\obj\x86\Release\Minesweeper UI.csproj.GenerateResource.Cache
+C:\Users\Carter Pearson\Documents\Side Projects\Minesweeper\minesweeper\Minesweeper UI\Minesweeper UI\obj\x86\Release\Minesweeper UI.csproj.CoreCompileInputs.cache
+C:\Users\Carter Pearson\Documents\Side Projects\Minesweeper\minesweeper\Minesweeper UI\Minesweeper UI\obj\x86\Release\Minesweeper UI.exe
+C:\Users\Carter Pearson\Documents\Side Projects\Minesweeper\minesweeper\Minesweeper UI\Minesweeper UI\obj\x86\Release\Minesweeper UI.pdb
